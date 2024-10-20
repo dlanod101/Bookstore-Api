@@ -5,5 +5,10 @@ from rest_framework import generics
 # Create your views here.
 
 class BookCreate(generics.CreateAPIView):
-    model = Book
+    queryset = Book.objects.all()
     serializer_class = BookSerializer
+
+class BookRetrieveUpdateDestroy(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Book.objects.all()
+    serializer_class = BookSerializer
+    lookup_field = 'pk'

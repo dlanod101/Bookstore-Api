@@ -89,13 +89,17 @@ WSGI_APPLICATION = 'bookProject.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',  # Supabase database name
-        'USER': 'postgres.avcyufvskbsmxplncnot',  # Supabase user
-        'PASSWORD': 'FIRESTORMDAONE*',  # Supabase password
-        'HOST': 'aws-0-eu-central-1.pooler.supabase.com',  # This is Supabase's database host
-        'PORT': '5432',  # PostgreSQL default port
+        'NAME': 'neondb',
+        'USER': 'neondb_owner',
+        'PASSWORD': 'npg_SryPFRGM7H8C',
+        'HOST': 'ep-black-river-a2olvotw-pooler.eu-central-1.aws.neon.tech',
+        'PORT': '5432',
+        'OPTIONS': {
+            'sslmode': 'require',
+        },
     }
 }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
